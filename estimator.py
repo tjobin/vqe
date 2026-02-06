@@ -70,7 +70,10 @@ def get_estimator(
 
         # Set shot noise via default_precision setting
         # Note : here, shot noise is essentially set to 0 because the AerEstimator instance adds it
-        # as posterior Gaussian noise, which is hardware-independent.
-        estimator.options.default_precision =  0    # 1 / np.sqrt(n_shots)
+        # as posterior Gaussian noise, which is ansatz-independent.
+        if n_shots > 0:
+            estimator.options.default_precision = 1 / (n_shots ** 0.5)  # Standard deviation of the Gaussian noise
+        else:
+            estimator.options.default_precision =  0
         estimator.options.seed_simulator = 0
     return estimator
