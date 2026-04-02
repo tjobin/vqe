@@ -5,7 +5,7 @@
 ### 📖 Overview
 
 
-vqe-project is the result of a project in Prof Vincenzo Savona's Quantum Compouting course. The goal was to study ansatz performance under depolarizing noise for a physically-motivated ansatz, UCCSD, and a hardware-efficient ansatz, EfficientSU2. It used the Qiskit 
+vqe-project is the result of a project in Prof Vincenzo Savona's Quantum Compouting course. The goal was to study ansatz performance under depolarizing noise for a physically-motivated ansatz, UCCSD, and a hardware-efficient ansatz, EfficientSU2. It used the Qiskit library and the AerSimulator to run quantum circuits and simulate a depolarizing channel. The project received the grade 6/6.
 
 ---
 
